@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   iconly: ^1.0.1
+  google_fonts: ^6.2.1
   flutter:
     sdk: flutter
 
