@@ -1,11 +1,11 @@
 class IndividualBar {
   int x;
-  int y;
+  double y;
 
   IndividualBar({
     required this.x,
     required this.y
   });
 
-  
+
 }
