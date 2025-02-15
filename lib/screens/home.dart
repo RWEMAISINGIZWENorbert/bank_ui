@@ -1,6 +1,7 @@
 import 'package:bank_ui/models/latest_people.dart';
 import 'package:bank_ui/models/recent_transactions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
@@ -63,6 +64,7 @@ class Home extends StatelessWidget {
           Container(
             height:  screenHeight / 5,
             margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               gradient: LinearGradient(
@@ -73,17 +75,62 @@ class Home extends StatelessWidget {
               ])
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                        children: [
-                        Text('Your Balance'),
-                        Text('12,333543454 frw')
+                        Text(
+                          'Your Balance',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.grey,
+                            fontSize: 18,
+                          ),
+                          ),
+                        Text(
+                          '12,3335,43454 frw',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w600
+                          ),
+                          )
                        ],
-                    )
+                    ),
+                     SvgPicture.asset(
+                      'assets/icon.svg', // Update the path to your SVG file
+                      // height: 36,
+                      width: 100,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                          Text(
+                          'Credit card',
+                          style: GoogleFonts.poppins(
+                            color: Colors.grey,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600
+                          ),
+                          ),
+                        Text(
+                          '*** *** *** 2004',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600
+                          ),
+                          )
+                      ],
+                    ),
                   ],
                 )
               ],

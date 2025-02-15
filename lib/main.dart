@@ -1,5 +1,4 @@
 import 'package:bank_ui/navigator.dart';
-import 'package:bank_ui/screens/home.dart';
 import 'package:bank_ui/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
 
