@@ -269,8 +269,11 @@ class Statistics extends StatelessWidget {
                             Icon(IconlyLight.arrow_down_2, size: 16,)
                           ],
                         ),
-                      )                     
+                      )
                   ],
+                ),
+                Container(
+                  
                 ),
               ],
             ),
