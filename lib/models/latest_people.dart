@@ -1,21 +1,21 @@
 
 class LatestPeople {
-   final String img_name;
-   final String user_name;
+   final String imgName;
+   final String userName;
 
    LatestPeople({
-    required this.img_name,
-    required this.user_name
+    required this.imgName,
+    required this.userName
    });
 
   
   static List<LatestPeople> initLatestPeople(){
      List<LatestPeople> data  = [];
    
-   data.add(LatestPeople(img_name: 'assets/im.jpg', user_name: 'rwema'));
-   data.add(LatestPeople(img_name: 'assets/im.jpg', user_name: 'rwema'));
-   data.add(LatestPeople(img_name: 'assets/im.jpg', user_name: 'rwema'));
-   data.add(LatestPeople(img_name: 'assets/im.jpg', user_name: 'rwema'));
+   data.add(LatestPeople(imgName: 'assets/im.jpg', userName: 'rwema'));
+   data.add(LatestPeople(imgName: 'assets/im.jpg', userName: 'rwema'));
+   data.add(LatestPeople(imgName: 'assets/im.jpg', userName: 'rwema'));
+   data.add(LatestPeople(imgName: 'assets/im.jpg', userName: 'rwema'));
 
     return data;
     
