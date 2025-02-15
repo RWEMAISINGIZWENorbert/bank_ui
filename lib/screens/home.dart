@@ -105,7 +105,7 @@ class Home extends StatelessWidget {
                      SvgPicture.asset(
                       'assets/icon.svg', // Update the path to your SVG file
                       // height: 36,
-                      width: 100,
+                      width: 50,
                     ),
                   ],
                 ),
