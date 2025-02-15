@@ -10,6 +10,7 @@ class Statistics extends StatelessWidget {
   Widget build(BuildContext context) {
        
        final double screenHeight = MediaQuery.of(context).size.height;
+       final double screenWidth = MediaQuery.of(context).size.width;
        List<RecentTransactions> items = RecentTransactions.transactions();
 
     return Scaffold(
@@ -51,7 +52,8 @@ class Statistics extends StatelessWidget {
         children: [
           Container(
             height: screenHeight / 4,
-            margin: EdgeInsets.all(8),
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
@@ -64,7 +66,157 @@ class Statistics extends StatelessWidget {
                 )
               ],
             ),
-            // child: Column()
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    RichText(
+                       text: TextSpan(
+                        text: 'spent overview',
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 18,
+                          ),
+                        children: const <TextSpan> [
+                          TextSpan(
+                            text: '\n10,576.00 frw',
+                            style: TextStyle(
+                                color: Colors.black, 
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20
+                                )
+                          ),
+                        ]   
+                       ),
+                      ),
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('january  ', style: GoogleFonts.poppins(
+                               color: Colors.black,
+                            ),
+                            ),
+                            Icon(IconlyLight.arrow_down_2, size: 16,)
+                          ],
+                        ),
+                      )                     
+                  ],
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width:screenWidth / 3,
+                      height: 16,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(6)
+                      ),
+                    ),
+                    Container(
+                        width:screenWidth / 5,
+                      height: 16,
+                      decoration: BoxDecoration(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(6)
+                      ),
+                    ),
+                    Container(
+                      width:screenWidth / 4,
+                      height: 16,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(6)
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12,),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                          ClipOval(
+                            child: Container(
+                              width: 15,
+                              height: 15,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text('Entartnment'),
+                          ],
+                        ),
+                        Text('6,500.00 frw', style: GoogleFonts.poppins(
+                           color: Colors.black,
+                           fontSize: 18,
+                           fontWeight: FontWeight.bold
+                        ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                          ClipOval(
+                            child: Container(
+                              width: 15,
+                              height: 15,
+                              color: Colors.yellow,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text('Invetsment'),
+                          ],
+                        ),
+                        Text('6,500.00 frw', style: GoogleFonts.poppins(
+                           color: Colors.black,
+                           fontSize: 18,
+                           fontWeight: FontWeight.bold
+                        ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                          ClipOval(
+                            child: Container(
+                              width: 15,
+                              height: 15,
+                              color: Colors.red,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text('Foods and beverage'),
+                          ],
+                        ),
+                        Text('6,500.00 frw', style: GoogleFonts.poppins(
+                           color: Colors.black,
+                           fontSize: 18,
+                           fontWeight: FontWeight.bold
+                        ),
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            )
             ),
             const SizedBox(height: 14),
           Container(
@@ -82,9 +234,46 @@ class Statistics extends StatelessWidget {
                 )
               ],
             ),
-            // child: Column(
-              
-            // ),
+            child: Column(
+              children: [
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    RichText(
+                       text: TextSpan(
+                        text: 'Total Expenses',
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 18,
+                          ),
+                        children: const <TextSpan> [
+                          TextSpan(
+                            text: '\n10,576.00 frw',
+                            style: TextStyle(
+                                color: Colors.black, 
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20
+                                )
+                          ),
+                        ]   
+                       ),
+                      ),
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('january  ', style: GoogleFonts.poppins(
+                               color: Colors.black,
+                            ),
+                            ),
+                            Icon(IconlyLight.arrow_down_2, size: 16,)
+                          ],
+                        ),
+                      )                     
+                  ],
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 14),
           bottomTransactions(screenHeight, items),
