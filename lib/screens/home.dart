@@ -15,6 +15,7 @@ class Home extends StatelessWidget {
        List<RecentTransactions> items = RecentTransactions.transactions();
 
      return Scaffold(
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
       elevation: 0.9,
       backgroundColor: Colors.white,
