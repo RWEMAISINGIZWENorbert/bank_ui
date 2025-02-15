@@ -1,4 +1,5 @@
 import 'package:bank_ui/models/recent_transactions.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
@@ -273,7 +274,15 @@ class Statistics extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  
+                  height: screenHeight/ 4.1,
+                  child: 
+                  BarChart(
+                    BarChartData(
+                      minY: 200,
+                      maxY: 100,
+                      // barGroups: 
+                    )  
+                  ),
                 ),
               ],
             ),
