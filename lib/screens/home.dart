@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
       elevation: 0.9,
+      toolbarHeight: 50,
       backgroundColor: Colors.white,
       leading: Container(
         margin: EdgeInsets.only(left: 4),
